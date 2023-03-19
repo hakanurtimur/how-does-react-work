@@ -2,10 +2,15 @@ import React from "react";
 import MyChild from "./MyChild";
 
 
-export default function DemoOutput(props) {
+function DemoOutput(props) {
+
+    console.log('Demo op running')
 
 
     return (
         <MyChild>{props.isShown? 'This is new!' : ''}</MyChild>
     )
 }
+
+
+export default React.memo(DemoOutput);
